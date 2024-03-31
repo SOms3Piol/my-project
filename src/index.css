@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .link-class{
+        @apply mr-1 text-black  border-white   border-b-2 hover:border-orange-600 text-xs;
+    }
+    .button-l{
+        @apply absolute bg-gradient-to-r left-0 from-white from-70%  aspect-square z-10 w-[35px];
+    }
+    .button-r{
+        @apply absolute bg-gradient-to-l right-0 from-white from-80%  aspect-square z-10 w-[35px] ;
+    }
+}
+@layer utilities {
+    .scrollbar-hidden {
+        scrollbar-width: none;
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+}

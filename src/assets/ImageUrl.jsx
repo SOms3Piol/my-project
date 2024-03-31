@@ -1,0 +1,1 @@
+export let ImageUrl = 'https://img.freepik.com/premium-psd/black-friday-sale-social-media-post-instagram-post-web-banner-facebook-cover-template_220443-1071.jpg'
