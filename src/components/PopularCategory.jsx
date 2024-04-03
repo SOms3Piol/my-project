@@ -71,12 +71,15 @@ function PopularCategory(){
                     initial={{translateX: -50 , opacity:0}}
                     whileInView={ { translateX:0 , opacity:1  , transition:'all' } }
                     className=" flex flex-col items-center gap-3 group/text">
-                        <div className="w-[170px] h-[170px] rounded-full text-center">
+                        <motion.div 
+                         animate={{ rotateY: 360 }}
+                         transition={{ ease:'easeIn' ,  duration: 6 , repeat: Infinity , repeatType:'loop'}}
+                        className="w-[170px] h-[170px] rounded-full text-center">
                             <img 
                             src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/Cross-of-Light-Pendant-1-360x360.jpg" 
                             alt="" 
                             className="rounded-full"/>
-                        </div>
+                        </motion.div>
                         <h1 className="text-center hover:text-black relative py-[1px] ">Necklaces
                         
                         <span className="bg-zinc-800 absolute  scale-0 transition ease-in group-hover/text:scale-100 group-hover/text:w-full bottom-0 left-0 py-[1px] rounded origin-left duration-500"></span></h1>
@@ -85,12 +88,15 @@ function PopularCategory(){
                     initial={{translateX: -100 , opacity:0}}
                     whileInView={ { translateX:0 , opacity:1  , transition:'all' } }
                     className="flex flex-col items-center gap-3 group/text">
-                        <div className="w-[170px] h-[170px] rounded-full text-center">
+                        <motion.div 
+                           animate={{ rotateY: 360 }}
+                           transition={{ ease:'easeIn' ,  duration: 6 , repeat: Infinity , repeatType:'loop'}}
+                        className="w-[170px] h-[170px] rounded-full text-center">
                             <img 
                             src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/Rings-360x360.jpg" 
                             alt="" 
                             className="rounded-full"/>
-                        </div>
+                        </motion.div>
                         <h1 className="text-center hover:text-black relative py-[1px] group/text">Rings
                         <span className="bg-zinc-800 absolute  scale-0 transition ease-in group-hover/text:scale-100 group-hover/text:w-full bottom-0 left-0 py-[1px] rounded origin-left duration-500 "></span>
                         </h1>
@@ -99,12 +105,15 @@ function PopularCategory(){
                     initial={{translateX: -150 , opacity:0}}
                     whileInView={ { translateX:0 , opacity:1  , transition:'all' } }
                     className="flex flex-col items-center gap-3 group/text">
-                        <div className="w-[170px] h-[170px] rounded-full text-center">
+                        <motion.div 
+                        animate={{ rotateY: 360 }}
+                        transition={{ ease:'easeIn' ,  duration: 6 , repeat: Infinity , repeatType:'loop'}}
+                        className="w-[170px] h-[170px] rounded-full text-center">
                             <img 
                             src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/Rose-Gold-Bracelet-1-360x360.jpg" 
                             alt="" 
                             className="rounded-full"/>
-                        </div>
+                        </motion.div>
                         <h1 className="text-center hover:text-black relative py-[1px]">Braclets
                         
                         <span className="bg-zinc-800 absolute  scale-0 transition ease-in group-hover/text:scale-100 group-hover/text:w-full bottom-0 left-0 py-[1px] rounded origin-left duration-500"></span>
@@ -115,12 +124,15 @@ function PopularCategory(){
                     initial={{translateX: -200 , opacity:0}}
                     whileInView={ { translateX:0 , opacity:1  , transition:'all' } }
                     className="flex flex-col items-center gap-3 group/text">
-                        <div className="w-[170px] h-[170px] rounded-full text-center group/text">
+                        <motion.div 
+                        animate={{ rotateY: 360 }}
+                        transition={{ ease:'easeIn' ,  duration: 6 , repeat: Infinity , repeatType:'loop'}}
+                        className="w-[170px] h-[170px] rounded-full text-center group/text">
                             <img 
                             src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/Sterling-Silver-Dangles-Earrings-1-360x360.jpg" 
                             alt="" 
                             className="rounded-full "/>
-                        </div>
+                        </motion.div>
                         <h1 className="text-center hover:text-black relative py-[1px]">Braclets
                         <span className="bg-zinc-800 absolute  scale-0 transition ease-in group-hover/text:scale-100 group-hover/text:w-full bottom-0 left-0 py-[1px] rounded origin-left duration-500"></span></h1>
                     </motion.div>
@@ -128,12 +140,15 @@ function PopularCategory(){
                     initial={{translateX: -250 , opacity:0}}
                     whileInView={ { translateX:0 , opacity:1  , transition:'all' } }
                     className="flex flex-col items-center gap-3 group/text">
-                        <div className="w-[170px] h-[170px] rounded-full text-center">
+                        <motion.div 
+                        animate={{ rotateY: 360 }}
+                        transition={{ ease:'easeIn' ,  duration: 6 , repeat: Infinity , repeatType:'loop'}}
+                        className="w-[170px] h-[170px] rounded-full text-center">
                             <img 
                             src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/Charm-Dangles-360x360.jpg" 
                             alt="" 
                             className="rounded-full "/>
-                        </div>
+                        </motion.div>
                         <h1 className="text-center hover:text-black relative py-[1px] ">Charm & Dangles
                         <span className="bg-zinc-800 absolute  scale-0 transition ease-in group-hover/text:scale-100 group-hover/text:w-full bottom-0 left-0 py-[1px] rounded origin-left duration-500"></span></h1>
                     </motion.div>
@@ -141,12 +156,15 @@ function PopularCategory(){
                     initial={ { translateX: -300 , opacity:0 } }
                     whileInView={ { translateX:0 , opacity:1  , transition:'all' , transitionDuration:1 } }
                     className="flex flex-col items-center gap-3 group/text">
-                        <div className="w-[170px] h-[170px] rounded-full text-center">
+                        <motion.div 
+                        animate={{ rotateY: 360 }}
+                        transition={{ ease:'easeIn' ,  duration: 6 , repeat: Infinity , repeatType:'loop'}}
+                        className="w-[170px] h-[170px] rounded-full text-center">
                             <img 
                             src="https://alukas.presslayouts.com/wp-content/uploads/2023/04/Gift-360x360.jpg" 
                             alt="" 
                             className="rounded-full"/>
-                        </div>
+                        </motion.div>
                         <h1 className="text-center hover:text-black relative py-[1px] ">Gift Ideas
                         <span className="bg-zinc-800 absolute  scale-0 transition ease-in group-hover/text:scale-100 group-hover/text:w-full bottom-0 left-0 py-[1px] rounded origin-left duration-500"></span></h1>
                     </motion.div>
