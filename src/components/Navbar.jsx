@@ -4,6 +4,7 @@ import { VscLocation } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
 export default function Navbar(){
     const [shown, setShown] = useState(false)
     const handleEvent = ()=>{
@@ -44,13 +45,16 @@ export default function Navbar(){
                         <IoIosArrowDown/></span>
                     </p>
                     {
-                        shown && (<div className=" absolute  w-full bg-white  flex flex-col text-left px-3 py-5 gap-3 text-slate-400 cursor-pointer transition ease-in" >
+                        shown && (<motion.div 
+                            initial={ { opacity:0 , y:10} }
+                            animate={ { opacity:1 , y:0 , transition:'easeIn' , transitionDuration:0.5} }
+                            className=" absolute  w-full bg-white  flex flex-col text-left px-3 py-5 gap-3 text-slate-400 cursor-pointer transition ease-in" >
                             <p className="hover:text-black transition ease-in">Bracelets</p>
                             <p className="hover:text-black transition ease-in">Earings</p>
                             <p className="hover:text-black transition ease-in">Rings</p>
                             <p className="hover:text-black transition ease-in">Necklece</p>
                             <p className="hover:text-black transition ease-in">Watches</p>
-                        </div>)
+                        </motion.div>)
                     }
                 </div>
                <div className="flex mr-[73px] gap-3 text-xl md:max-lg:text-base">

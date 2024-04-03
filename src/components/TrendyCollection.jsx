@@ -1,5 +1,5 @@
 import Item from "../components/Item";
-function TrendyCollection({title , desc}){
+function Collection({title , desc}){
     return(
         <div className="w-full overflow-x-scroll font-Jost">
              <div className="w-full  flex justify-center">
@@ -55,4 +55,4 @@ function TrendyCollection({title , desc}){
         </div>
     )
 }
-export default TrendyCollection;
+export default Collection;

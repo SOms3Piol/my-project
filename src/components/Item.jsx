@@ -1,6 +1,12 @@
+import { motion }  from 'framer-motion'
+import { Link } from 'react-router-dom'
 export default function Item({src1 , src2 , title , category , price}){
     return(
-        <div className="Card group  overflow-hidden  font-Jost">
+       <Link to={'/SingleProduct'}>
+             < motion.div 
+         initial={ { y:100 , opacity:0 } }
+         whileInView={ { y:0  , opacity:1 , transition:'all' , transitionDuration:3 } }
+        className="Card group  overflow-hidden  font-Jost">
                     <div className="relative text-center flex justify-center items-center ">
                         <img src={src1} 
                         alt="" className="group-hover:right-0"/>
@@ -17,6 +23,7 @@ export default function Item({src1 , src2 , title , category , price}){
                         group-hover:-translate-y-5 opacity-0 max-[810px]:opacity-100 group-hover:opacity-100 transition ease-in delay-75 border-b uppercase md:font-semibold max-md:text- ">Add to Cart</button>
                     </div>
             </div>
-        </div>
+        </motion.div>
+       </Link>
     )
 }
