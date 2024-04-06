@@ -3,7 +3,7 @@ import NewsLatter from "../components/NewLatter";
 export default function About(){
     return(
         <>
-        <div className="grid grid-cols-3 place-items-center">
+        <div className=" relative grid grid-cols-3 place-items-center">
             <div className="flex flex-col gap-9 p-3 leading-7">
                  <h1 className="text-5xl">About Our <br /> Online Store</h1>
                  <p className="text-slate-400 ">With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human instinct come back </p>

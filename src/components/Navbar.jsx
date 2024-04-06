@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { FiCrosshair, FiHeart, FiPhone,  FiSearch, FiShoppingCart, FiUser } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import { VscLocation } from "react-icons/vsc";
@@ -65,9 +65,31 @@ export default function Navbar(){
     const handleEvent = ()=>{
         setShown(!shown);
     }
+     const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+     const [top, setTop] = useState(0);
+    useEffect(() => {
+        // Function to handle scroll events
+            const handleScroll = () => {
+                const currentScrollPos = window.pageYOffset;
+                console.log('current: ' + currentScrollPos);
+                if (prevScrollpos > currentScrollPos) {
+                    setTop(0); // Show navbar
+                } else {
+                    setTop(-70); // Hide navbar
+                }
+                setPrevScrollpos(currentScrollPos);
+            };
+            console.log('prev: ' + prevScrollpos)
+            // Add scroll event listener when the component mounts
+            window.addEventListener('scroll', handleScroll);
+            // Clean up by removing the event listener when the component unmounts
+            return () => {
+            window.removeEventListener('scroll', handleScroll);
+            };
+        }, [prevScrollpos]);
     return(
         <>
-        <header className="fixed bg-white z-30 w-full">
+        <header className={` bg-white z-30 w-full transition duration ${ top < 0 ? 'fixed' : 'relative'}`} style={ {  top:`${top}px` }}>
             <nav className="grid grid-cols-3 p-3">
                 <div className="border h-[45px] flex  box-border w-[27vw] text-slate-400 max-lg:hidden">
                     <input type="text" placeholder="Search Products" className="outline-none w-full px-2"/>

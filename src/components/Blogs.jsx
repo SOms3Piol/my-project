@@ -46,11 +46,10 @@ export default function Blogs(){
           <p className="text-base font-medium">Alukas <span className="text-slate-400 text-base">- Feburary 1,2005</span></p>
           <h1 className="text-xl font-medium letter-wide">{title}</h1>
           <p className="text-base text-slate-400">{desc}</p>
-          <span className="relative w-[122px] overflow-hidden group/text" >Continue Reading
-          <span className="absolute w-full bg-slate-200 py-[1px] bottom-0 left-0 "></span>
+          <span className="relative w-[122px]  overflow-x-hidden group/text" >Continue Reading
+           <span className="absolute w-full bg-slate-200 py-[1px] bottom-0 left-0 "></span>
              <span className="group-hover/text:absolute w-full group-hover/text:bg-black py-[1px] bottom-0 left-0 group-hover/text:translate-x-[125px] transition ease-linear duration-300"></span>
              <span className="group-hover/text:absolute w-full bg-black py-[1px] bottom-0 -left-[122px] group-hover/text:translate-x-[122px] transition ease-linear duration-300 group-hover:scale-100 delay-300 "></span>
-             
           </span>
        </div>
    </div>
