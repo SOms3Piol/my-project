@@ -1,5 +1,7 @@
 import { motion }  from 'framer-motion'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import CartContext from '../context/carContext'
 export default function Item({src1 , src2 , title , category , price}){
     return(
        <Link to={'/SingleProduct'}>
@@ -20,7 +22,7 @@ export default function Item({src1 , src2 , title , category , price}){
                         <div className="overflow-hidden box-border  ">
                         <p className=" group-hover:-translate-y-5 transition ease-in delay-75 font-semibold max-md:text-base">{price}</p>
                         <button className="group-hover:visible
-                        group-hover:-translate-y-5 opacity-0 max-[810px]:opacity-100 group-hover:opacity-100 transition ease-in delay-75 border-b uppercase md:font-semibold max-md:text- ">Add to Cart</button>
+                        group-hover:-translate-y-5 opacity-0 max-[810px]:opacity-100 group-hover:opacity-100 transition ease-in delay-75 border-b uppercase md:font-semibold max-md:text- " >Add to Cart</button>
                     </div>
             </div>
         </motion.div>

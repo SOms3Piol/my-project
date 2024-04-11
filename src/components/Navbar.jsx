@@ -87,6 +87,7 @@ export default function Navbar(){
             window.removeEventListener('scroll', handleScroll);
             };
         }, [prevScrollpos]);
+        
     return(
         <>
         <header className={` bg-white z-30 w-full transition duration ${ top < 0 ? 'fixed' : 'relative'}`} style={ {  top:`${top}px` }}>
@@ -99,11 +100,11 @@ export default function Navbar(){
                 <div className="flex w-[25vw] justify-center">
                     <img src="https://alukas.presslayouts.com/wp-content/themes/alukas/assets/images/logo.svg" alt="" className="w-[150px] "/>
                 </div>
-                <div className="text-2xl grid justify-items-end">
+                <div className="text-2xl grid justify-items-end place-items-center">
                     <div className="flex gap-3">
                         <button className="max-lg:hidden"><FiUser /></button>
                         <button className="max-lg:hidden"><FiHeart /></button>
-                        <button className=""><FiShoppingCart /></button>
+                        <Link  to={'/cart'} className=""><FiShoppingCart /></Link>
                     </div>
                 </div>
             </nav>
