@@ -36,10 +36,10 @@ export default function Reviews(){
     return(
     <div className="bg-[url('https://alukas.presslayouts.com/wp-content/uploads/2023/04/home-default-testimonial-bg.jpg')] bg-no-repeat py-[44px] bg-center  bg-cover mt-[70px] flex flex-col  ">
        <h1 className="w-full text-center text-5xl py-3 max-sm:text-3xl">Customer Reviews</h1>
-       <div className="relative sm:overflow-hidden overflow-scroll  scrollbar-hidden">
-         <button className="absolute left-0 top-1/2 max-sm:hidden -translate-y-[50%] text-3xl z-10" onClick={handleLeftClick}><FiArrowLeft /></button>
-         <button className="absolute right-0 top-1/2 max-sm:hidden -translate-y-[50%] z-10 text-3xl" onClick={handleRightClick}><FiArrowRight /></button>
-         <div ref={containerRef} className="flex gap-3 px-1 sm:px-5 py-5 scrollbar-hidden block relative transition duration-500 ease-in" style={{
+       <div className="relative sm:overflow-hidden overflow-scroll  scrollbar-hidden ">
+         <button className="absolute left-0 top-1/2 max-sm:hidden -translate-y-[50%] p-5 text-3xl z-10" onClick={handleLeftClick}><FiArrowLeft /></button>
+         <button className="absolute right-0 top-1/2 max-sm:hidden -translate-y-[50%] p-5 z-10 text-3xl" onClick={handleRightClick}><FiArrowRight /></button>
+         <div ref={containerRef} className="flex gap-3  sm:px-5 py-5 scrollbar-hidden block relative transition duration-500 ease-in  " style={{
             transform: `translateX(-${translate}px)`
          }}>
             <Block 

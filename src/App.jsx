@@ -8,6 +8,7 @@ import About from "./pages/About";
 import { useContext } from "react";
 import CartContext from "./context/carContext";
 import Cart from "./components/Cart";
+import BlogPage from "./pages/Blog";
 function App(){
   const {cartItems} = useContext(CartContext)
   return(
@@ -19,6 +20,7 @@ function App(){
          <Route path="/SingleProduct" element={<SingleProduct />} />
          <Route path="/About" element={<About />} />
          <Route path="/cart" element={<Cart />} />
+         <Route path="/Blog" element={<BlogPage />} />
        </Routes>
       <Footer />
     </Router>

@@ -1,4 +1,4 @@
-import { useState , useEffect} from "react";
+import { useState , useEffect, useContext} from "react";
 import { FiCrosshair, FiHeart, FiPhone,  FiSearch, FiShoppingCart, FiUser } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import { VscLocation } from "react-icons/vsc";
@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion'
+import CartContext from "../context/carContext";
 
 function SideBar(){
     const [shown, setShown] = useState(false)
@@ -16,7 +17,7 @@ function SideBar(){
         <motion.div 
          initial={{ width:0  , height:0, opacity:0 , borderRadius:'50%'}}
          animate={ { width:'250px', height:'100%' , opacity:1 , borderRadius:0 , transition:{ ease:'easeIn', duration:0.3 } } }
-        className="flex flex-col gap-3 mt-3 rounded-lg shadow-md w-[250px] items-center  sm:max-md:w-[250px] sm:max-md:text-base bg-white fixed z-50 py-3 h-screen ">
+        className="flex flex-col gap-3 mt-3 rounded-lg shadow-md w-[250px] items-center  sm:max-md:w-[250px] sm:max-md:text-base bg-white fixed z-50 py-3 h-screen lg:hidden ">
             <div>
                 <img 
                 src="https://alukas.presslayouts.com/wp-content/themes/alukas/assets/images/logo.svg" 
@@ -62,6 +63,7 @@ function SideBar(){
 export default function Navbar(){
     const [shown, setShown] = useState(false)
     const [onClick, setOnClick] = useState(false)
+    const { total } = useContext(CartContext);
     const handleEvent = ()=>{
         setShown(!shown);
     }
@@ -71,7 +73,7 @@ export default function Navbar(){
         // Function to handle scroll events
             const handleScroll = () => {
                 const currentScrollPos = window.pageYOffset;
-                console.log('current: ' + currentScrollPos);
+               
                 if (prevScrollpos > currentScrollPos) {
                     setTop(0); // Show navbar
                 } else {
@@ -79,7 +81,7 @@ export default function Navbar(){
                 }
                 setPrevScrollpos(currentScrollPos);
             };
-            console.log('prev: ' + prevScrollpos)
+            
             // Add scroll event listener when the component mounts
             window.addEventListener('scroll', handleScroll);
             // Clean up by removing the event listener when the component unmounts
@@ -104,7 +106,7 @@ export default function Navbar(){
                     <div className="flex gap-3">
                         <button className="max-lg:hidden"><FiUser /></button>
                         <button className="max-lg:hidden"><FiHeart /></button>
-                        <Link  to={'/cart'} className=""><FiShoppingCart /></Link>
+                        <Link  to={'/cart'} className="relative p-2"><FiShoppingCart /><span className="absolute top-0 right-0 bg-black h-[18px] flex justify-center items-center text-xs w-[18px] rounded-full text-white">{total}</span></Link>
                     </div>
                 </div>
             </nav>
