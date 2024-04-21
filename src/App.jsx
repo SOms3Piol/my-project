@@ -9,19 +9,22 @@ import { useContext } from "react";
 import CartContext from "./context/carContext";
 import Cart from "./components/Cart";
 import BlogPage from "./pages/Blog";
+import ScrollToTop from "./components/ScrollTop";
 function App(){
   const {cartItems} = useContext(CartContext)
   return(
     <Router>
       <Navbar />
-       <Routes>
-         <Route path="/" element={<Home/>}/>
-         <Route path="/shop" element={<Shop />} />
-         <Route path="/SingleProduct" element={<SingleProduct />} />
-         <Route path="/About" element={<About />} />
-         <Route path="/cart" element={<Cart />} />
-         <Route path="/Blog" element={<BlogPage />} />
-       </Routes>
+       
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/SingleProduct" element={<SingleProduct />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/Blog" element={<BlogPage />} />
+        </Routes>
+       <ScrollToTop />
       <Footer />
     </Router>
   )
