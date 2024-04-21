@@ -141,6 +141,7 @@ export default function Navbar(){
                <div className="flex mr-[73px] gap-3 text-xl md:max-lg:text-base">
                    <Link to={'/'}>Home</Link>
                    <Link to={'/shop'}>Shop</Link>
+                   <Link to={'/cart'}>Cart</Link>
                    <Link to={'/About'}>About US</Link>
                </div>
                <div className="flex gap-3 ">

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-export default function ImageText({productDetails}){
+export default function ImageText(){
 
     return(
         <div className="grid grid-cols-2  gap-5 mt-3 max-sm:flex max-sm:flex-col px-3">
