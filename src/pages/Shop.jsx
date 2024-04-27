@@ -31,16 +31,19 @@ export default function Shop(){
                 <div className="flex gap-3 items-center text-xl px-3">
                     Sort By
                     <button className="relative group" onClick={()=>{
-                        setlist(true);
+                        setlist(false);
                     }} ><CiBoxList /><span className="hidden absolute text-xs  group-hover:flex">List</span></button>
                     <button className="relative" onClick={()=>{
                         setColumn(2)
+                        setlist(false);
                     }}><TfiLayoutGrid2 /> <span className="hidden">2 Columns</span></button>
                     <button className="relative max-md:hidden" onClick={()=>{
                         setColumn(3)
+                        setlist(false);
                     }}><BsGrid3X3Gap /> <span className="hidden">3 Columns</span></button>
                     <button className="relative max-md:hidden" onClick={()=>{
                         setColumn(4)
+                        setlist(false);
                     }}><TfiLayoutGrid4 /> <span className="hidden">4 Columns</span></button>
                 </div>
              </div>

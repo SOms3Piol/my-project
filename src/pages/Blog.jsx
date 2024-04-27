@@ -20,8 +20,8 @@ export default function BlogPage(){
                         <p className='text-slate-400'><span className='text-black'>Alukas -</span> Febauray 17,2024</p>
                     </div>
                     <div className='px-9 border-box py-9'>
-                        <img className='object-cover' src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/How-to-Style-a-Quiff.jpg" alt="" />
-                            <div className='w-[1060px] flex flex-col gap-[30px] mt-[70px]'>
+                        <img className='object-cover w-full' src="https://alukas.presslayouts.com/wp-content/uploads/2023/02/How-to-Style-a-Quiff.jpg" alt="" />
+                            <div className='w-full flex flex-col gap-[30px] mt-[70px]'>
                                 <p className='text-black font-medium '>
                                 Oneself endless holiest society philosophy dept valuation Contradicts gains nobless end lose preju dice battle hope the battle philosophy Gains endless capitalize taking seamless key performance indicators offline.
                                 </p>
@@ -42,9 +42,9 @@ export default function BlogPage(){
                             </div>
                             
                     </div>
-                   <div className='px-9 flex flex-col gap-8 py-8 w-[1060px]'>
+                   <div className='px-9 flex flex-col gap-8 py-8 w-full'>
                         <h1 className='text-3xl font-medium'>You might Also like</h1>
-                        <div className='flex gap-5 '>
+                        <div className='grid grid-cols-2 gap-5 md:max-lg:grid md:max-lg:grid-cols-2  max-sm:grid-cols-1'>
                             <Block  
                                 src={'https://alukas.presslayouts.com/wp-content/uploads/2023/02/Must-Have-Skater-Girl-Items-480x270.jpg'}
                                 title={'Must-have skater Girl Items'}
@@ -59,7 +59,7 @@ export default function BlogPage(){
                    </div>
                    <div className='px-9 '>
                      <h1 className='text-xl font-medium py-3'>Comments (1)</h1>
-                     <div className='flex gap-3 py-3 px-9 w-[1060px] border-2'>
+                     <div className='flex gap-3 py-3 px-9 w-full border-2'>
                         <span className=''><img className='rounded-full ' src="https://secure.gravatar.com/avatar/93970e7c5f5eb39a6858a169a6742799?s=75&d=mm&r=g" alt="" /></span>
                         <div className='flex flex-col'>
                             <p className='flex flex-col gap-1'><span>Borack Obama</span><span className='text-slate-400'>March 14,2031</span></p>
