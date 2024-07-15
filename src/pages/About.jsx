@@ -12,7 +12,7 @@ export default function About(){
             <div className="bg-red-800">
                 <img className="" src="https://alukas.presslayouts.com/wp-content/uploads/2023/03/about-us-2-image-1.jpg" alt="" />
             </div>
-            <div className="flex flex-col gap-5 md:max-lg:grid md:max-lg:grid-cols-2  w-full">
+            <div className="flex flex-col gap-5 md:max-lg:grid md:max-lg:flex w-full">
                  <div className="flex-1 w-full">
                     <h3 className="text-3xl">Our Mission</h3>
                     <p className="text-slate-400 mt-3">By in entirely securing suitable graceful at families improved. Zealously few furniture repulsive was agreeable consisted difficult. Collected breakfast estimable questions in to favourite it. Known he place worth words it as to. Spoke now noise off smart her ready. </p>
