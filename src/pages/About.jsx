@@ -3,8 +3,8 @@ import NewsLatter from "../components/NewLatter";
 export default function About(){
     return(
         <>
-        <div className=" relative grid grid-cols-3 place-items-center md:max-lg:grid-cols-2 max-sm:grid-cols-2">
-            <div className="flex flex-col gap-9 p-3 leading-7">
+        <div className=" relative grid grid-cols-3 place-items-center md:max-lg:flex flex-wrap max-sm:grid-cols-2">
+            <div className="flex flex-col gap-9 p-3 leading-7 ">
                  <h1 className="text-5xl">About Our <br /> Online Store</h1>
                  <p className="text-slate-400 ">With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human instinct come back </p>
                  <button className=" py-3 transition ease-in duration bg-zinc-800 hover:bg-black text-white w-[130px]">contact us</button>
