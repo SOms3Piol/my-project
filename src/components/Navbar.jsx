@@ -17,7 +17,7 @@ function SideBar(){
         <motion.div 
          initial={{ width:0  , height:0, opacity:0 , borderRadius:'50%'}}
          animate={ { width:'250px', height:'100%' , opacity:1 , borderRadius:0 , transition:{ ease:'easeIn', duration:0.3 } } }
-        className="flex flex-col gap-3 mt-3 rounded-lg shadow-md w-[250px] items-center  sm:max-md:w-[250px] sm:max-md:text-base bg-white fixed z-50 py-3 h-screen lg:hidden ">
+        className="flex flex-col gap-3 rounded-lg shadow-md w-[250px] items-center  sm:max-md:w-[250px] sm:max-md:text-base bg-white fixed z-50 py-3 h-screen lg:hidden ">
             <div>
                 <img 
                 src="https://alukas.presslayouts.com/wp-content/themes/alukas/assets/images/logo.svg" 
@@ -51,7 +51,7 @@ function SideBar(){
                         </motion.div>)
                     }
                 <div className="flex  gap-3 text-xl md:max-lg:text-base flex-col ">
-                   <Link to={'/'}>Home</Link>
+                   <Link to={'/'} >Home</Link>
                    <Link to={'/shop'}>Shop</Link>
                    <Link to={'/About'}>About US</Link>
                </div>
@@ -149,7 +149,7 @@ export default function Navbar(){
                  <div className="flex items-center gap-3 text-xl"><span><VscLocation /></span> Find Store</div>
                </div>
             </nav>
-            {onClick && <SideBar /> } 
+            {onClick && <SideBar isShown={setTrue} />  } 
         </header>
         
         </>
