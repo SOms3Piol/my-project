@@ -79,8 +79,8 @@ function Block({src , title }){
             <div className='overflow-hidden relative group'>
                 <div>
                      <img className='group-hover:scale-110 transition ease-in duration-300' src={src} alt="img" />
-                     <div className='group-hover:absolute z-60 bg-black top-0  opacity-0  transition ease-linear duration-500 group-hover:opacity-50 h-full w-[480px]'></div>
                 </div>
+                 <div className='group-hover:absolute z-60 bg-black top-0  opacity-0  transition ease-linear duration-500 group-hover:opacity-50 h-full w-[480px]'></div>
                 <span className='absolute px-2 font-medium uppercase tracking-tighter py-2 text-xs top-4 left-4 bg-black text-white'>Jewellary</span>
             </div>
             <div className='flex flex-col gap-3'>
