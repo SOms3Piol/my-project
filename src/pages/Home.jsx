@@ -6,6 +6,7 @@ import { IoMdHome } from "react-icons/io";
 import TwoBlocks from "../components/TwoBlocks";
 import Blogs from "../components/Blogs";
 import Reviews from "../components/Reviews";
+import NewsLatter from "../components/NewLatter";
 export default function Home (){
   
     return (
