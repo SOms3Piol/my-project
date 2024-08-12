@@ -149,7 +149,7 @@ export default function Navbar(){
                  <div className="flex items-center gap-3 text-xl"><span><VscLocation /></span> Find Store</div>
                </div>
             </nav>
-            {onClick && <SideBar isShown={setTrue} />  } 
+            {onClick && <SideBar  />  } 
         </header>
         
         </>
