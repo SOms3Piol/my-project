@@ -68,14 +68,16 @@ export default function Navbar(){
      const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
      const [top, setTop] = useState(0);
      const handleEvent = ()=>{
-                if(window.innerWidth() >= 748)
                 setShown(!shown);
             }
     useEffect(() => {
             // Add scroll event listener when the component mounts
             window.addEventListener('resize', ()=>{
-                if(window.innerWidht() > 748)
-                setShown(false);
+                if(window.innerWidht() > 748){
+                    setShown(false);
+                    setOnClick(false);
+                }
+                
             });
             // Clean up by removing the event listener when the component unmounts
             return () => {
