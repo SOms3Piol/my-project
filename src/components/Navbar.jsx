@@ -64,31 +64,25 @@ export default function Navbar(){
     const [shown, setShown] = useState(false)
     const [onClick, setOnClick] = useState(false)
     const { total } = useContext(CartContext);
-    const handleEvent = ()=>{
-        setShown(!shown);
-    }
+    
      const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
      const [top, setTop] = useState(0);
+     const handleEvent = ()=>{
+                if(window.innerWidth() >= 748)
+                setShown(!shown);
+            }
     useEffect(() => {
-        // Function to handle scroll events
-            const handleScroll = () => {
-                const currentScrollPos = window.pageYOffset;
-               
-                if (prevScrollpos > currentScrollPos) {
-                    setTop(0); // Show navbar
-                } else {
-                    setTop(-70); // Hide navbar
-                }
-                setPrevScrollpos(currentScrollPos);
-            };
-            
             // Add scroll event listener when the component mounts
-            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('resize', ()=>{
+                if(window.innerWidht() > 748)
+                setShown(false);
+            });
             // Clean up by removing the event listener when the component unmounts
             return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize');
             };
-        }, [prevScrollpos]);
+          
+        }, [shown]);
         
     return(
         <>
