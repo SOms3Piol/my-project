@@ -73,7 +73,7 @@ export default function Navbar(){
     useEffect(() => {
             // Add scroll event listener when the component mounts
             window.addEventListener('resize', ()=>{
-                if(window.innerWidth() > 748){
+                if(window.innerWidth > 1022){
                     setShown(false);
                     setOnClick(false);
                 }
