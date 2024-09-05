@@ -49,7 +49,8 @@ export default function Blogs(){
           <h1 className="text-xl font-medium letter-wide">{title}</h1>
           <p className="text-base text-slate-400">{desc}</p>
           <Link to={'/blog'} className="overflow-hidden  w-[122px]">
-            <span className="relative w-[122px]  overflow-x-hidden group/text" >Continue Reading
+            <span className="relative w-[122px]  overflow-x-hidden group/text  flex flex-col" >
+            <span className="whitespace-nowrap">Continue Reading</span>
             <span className="absolute w-full bg-slate-200 py-[1px] bottom-0 left-0 "></span>
                <span className="group-hover/text:absolute w-full group-hover/text:bg-black py-[1px] bottom-0 left-0 group-hover/text:translate-x-[125px] transition ease-linear duration-300"></span>
                <span className="group-hover/text:absolute w-full bg-black py-[1px] bottom-0 -left-[122px] group-hover/text:translate-x-[122px] transition ease-linear duration-300 group-hover:scale-100 delay-300 "></span>
