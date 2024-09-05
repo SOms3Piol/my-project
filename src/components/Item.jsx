@@ -27,7 +27,7 @@ export default function Item({src1 , src2 , title , category , price}){
                         <div className="overflow-hidden box-border  ">
                         <p className=" group-hover:-translate-y-5 transition ease-in delay-75 font-semibold max-md:text-base md:font-medium">${price}</p>
                         <button disabled={ clicked ? true : false } className="group-hover:visible
-                        group-hover:-translate-y-5 opacity-0 max-[810px]:opacity-100 group-hover:opacity-100 transition ease-in delay-75 border-b uppercase md:font-medium max-md:text-base " onClick={()=>{
+                        md:group-hover:-translate-y-5 opacity-0 max-[810px]:opacity-100 group-hover:opacity-100 transition ease-in delay-75 border-b uppercase md:font-medium max-md:text-base " onClick={()=>{
                             setCartItems([...cartItems , {src1 , title , price}]);
                             setClicked(true);
                         }}>Add to Cart</button>
